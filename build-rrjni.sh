@@ -2,9 +2,6 @@
 # The following variables must be set in user-config.sh
 # JDK_INCLUDE=jdk
 # JNI_INCLUDE=jni
-# RR_INSTALL_ROOT=rr
-# RR_INCLUDE=$RR_INSTALL_ROOT/include
-# RR_LIB_PATH=$RR_INSTALL_ROOT/lib
 
 source ./user-config.sh
 
@@ -19,5 +16,10 @@ cmake -DCMAKE_INSTALL_PREFIX=../../install/roadrunner -DTHIRD_PARTY_INSTALL_FOLD
 
 # return to root path
 cd ../..
+
+RR_INSTALL_ROOT=install/roadrunner
+RR_INCLUDE=$RR_INSTALL_ROOT/include
+RR_TP_INCLUDE=install/rr-thirdparty/include
+RR_LIB_PATH=$RR_INSTALL_ROOT/lib
 
 $CXX -I$JDK_INCLUDE proj.cpp TestClass.cpp -I$JNI_INCLUDE -I$RR_INCLUDE -I$RR_TP_INCLUDE -L$RR_LIB_PATH -lroadrunner -shared -fPIC -o libproj.so
