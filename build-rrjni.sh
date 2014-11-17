@@ -10,9 +10,9 @@ mkdir -p build/rr-thirdparty && cd build/rr-thirdparty
 cmake -DCMAKE_INSTALL_PREFIX=../../install/rr-thirdparty ../../roadrunner/third_party && make -j4 install
 
 # make rr build dir
-mkdir ../roadrunner && cd ../roadrunner
+mkdir -p ../roadrunner && cd ../roadrunner
 
-cmake -DCMAKE_INSTALL_PREFIX=../../install/roadrunner -DTHIRD_PARTY_INSTALL_FOLDER=../../install/rr-thirdparty -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON=OFF -DBUILD_TESTS=OFF -DBUILD_TEST_TOOLS=OFF ../../roadrunner
+cmake -DCMAKE_INSTALL_PREFIX=../../install/roadrunner -DTHIRD_PARTY_INSTALL_FOLDER=../../install/rr-thirdparty -DCMAKE_BUILD_TYPE=Release -DBUILD_PYTHON=OFF -DBUILD_TESTS=OFF -DBUILD_TEST_TOOLS=OFF ../../roadrunner && make -j4 install
 
 # return to root path
 cd ../..
