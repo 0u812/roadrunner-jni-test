@@ -14,3 +14,7 @@ test/myproj/test.class
 
 results.txt
 
+.build-rrjni.sh.swp
+build
+install
+
