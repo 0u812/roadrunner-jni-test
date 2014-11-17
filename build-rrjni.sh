@@ -1,9 +1,12 @@
 
-JDK_INCLUDE=jdk
-JNI_INCLUDE=jni
-RR_INSTALL_ROOT=rr
-RR_INCLUDE=$RR_INSTALL_ROOT/include
-RR_LIB_PATH=$RR_INSTALL_ROOT/lib
+# The following variables must be set in user-config.sh
+# JDK_INCLUDE=jdk
+# JNI_INCLUDE=jni
+# RR_INSTALL_ROOT=rr
+# RR_INCLUDE=$RR_INSTALL_ROOT/include
+# RR_LIB_PATH=$RR_INSTALL_ROOT/lib
+
+source ./user-config.sh
 
 mkdir -p build/rr-thirdparty && cd build/rr-thirdparty
 
