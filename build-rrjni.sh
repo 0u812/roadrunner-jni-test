@@ -3,6 +3,11 @@
 # JDK_INCLUDE=jdk
 # JNI_INCLUDE=jni
 
+if [ ! -f ./user-config.sh ]; then
+  echo "No user-config.sh found"
+  exit 1
+fi
+
 source ./user-config.sh
 
 mkdir -p build/rr-thirdparty && cd build/rr-thirdparty
