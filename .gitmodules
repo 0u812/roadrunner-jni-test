@@ -1,0 +1,4 @@
+[submodule "roadrunner"]
+	path = roadrunner
+	url = https://github.com/sys-bio/roadrunner.git
+	branch = develop
