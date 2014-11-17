@@ -1,7 +1,14 @@
 
+which llvm-config
+
+if [ $? -ne 0 ]; then
+  echo "llvm-config is not in your PATH"
+  exit 1
+fi
+
 # The following variables must be set in user-config.sh
-# JDK_INCLUDE=jdk
-# JNI_INCLUDE=jni
+# JDK_INCLUDE=jdk-path
+# JNI_INCLUDE=jni-path
 
 if [ ! -f ./user-config.sh ]; then
   echo "No user-config.sh found"
