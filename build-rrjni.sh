@@ -45,7 +45,8 @@ export LD_LIBRARY_PATH=/vagrant/install/roadrunner/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH=/vagrant/install/rr-thirdparty/lib:$LD_LIBRARY_PATH
 
 # Compile Java code
-javac test/myproj/test.jav
+javac test/myproj/test.java
 
 # Run Java code
-java test.myproj.testa
+java test.myproj.test
+
